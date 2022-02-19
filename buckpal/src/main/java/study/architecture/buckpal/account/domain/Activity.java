@@ -1,11 +1,13 @@
 package study.architecture.buckpal.account.domain;
 
 import java.time.LocalDateTime;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Value;
 
 @Getter
+@AllArgsConstructor
 public class Activity {
 
   private ActivityId id;

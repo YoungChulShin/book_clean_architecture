@@ -1,13 +1,25 @@
 package study.architecture.buckpal.account.domain;
 
 import java.time.LocalDateTime;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.Value;
 
+@Getter
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Account {
 
   private AccountId id;
   private Money baseLineBalance;
   private ActivityWindow activityWindow;
+
+  public static Account withId(
+      AccountId accountId,
+      Money baseLineBalance,
+      ActivityWindow activityWindow) {
+    return new Account(accountId, baseLineBalance, activityWindow);
+  }
 
   public Money calcualteBalance() {
     return Money.add(
