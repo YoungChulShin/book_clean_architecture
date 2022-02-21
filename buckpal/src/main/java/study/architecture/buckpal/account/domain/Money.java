@@ -2,11 +2,13 @@ package study.architecture.buckpal.account.domain;
 
 import java.math.BigInteger;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
 
 @Getter
 @AllArgsConstructor
+@EqualsAndHashCode
 public class Money {
 
   public static Money ZERO = Money.of(0L);

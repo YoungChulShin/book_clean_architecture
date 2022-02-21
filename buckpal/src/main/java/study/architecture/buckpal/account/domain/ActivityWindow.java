@@ -1,6 +1,7 @@
 package study.architecture.buckpal.account.domain;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,7 +18,7 @@ public class ActivityWindow {
   }
 
   public ActivityWindow(@NonNull Activity... activities) {
-    this.activities = Arrays.asList(activities);
+    this.activities = new ArrayList<>(Arrays.asList(activities));
   }
 
   public LocalDateTime getStartTimestamp() {
@@ -53,6 +54,11 @@ public class ActivityWindow {
   }
 
   public void addActivity(Activity activity) {
-    this.activities.add(activity);
+    try {
+      this.activities.add(activity);
+    } catch (Exception ex) {
+      String a= ex.getMessage();
+    }
+
   }
 }
