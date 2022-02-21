@@ -57,4 +57,9 @@ public class Money {
   public Money negate() {
     return new Money(this.amount.negate());
   }
+
+  @Override
+  public String toString() {
+    return String.valueOf(amount);
+  }
 }

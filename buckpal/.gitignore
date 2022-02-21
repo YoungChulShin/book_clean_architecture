@@ -158,3 +158,6 @@ gradle-app.setting
 .classpath
 
 # End of https://www.toptal.com/developers/gitignore/api/java,gradle,intellij
+
+# 코드 예외 처리
+!src/**/out
