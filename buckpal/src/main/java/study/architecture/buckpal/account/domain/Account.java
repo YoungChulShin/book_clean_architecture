@@ -1,6 +1,7 @@
 package study.architecture.buckpal.account.domain;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +20,10 @@ public class Account {
       Money baseLineBalance,
       ActivityWindow activityWindow) {
     return new Account(accountId, baseLineBalance, activityWindow);
+  }
+
+  public Optional<AccountId> getId() {
+    return Optional.ofNullable(id);
   }
 
   public Money calcualteBalance() {
