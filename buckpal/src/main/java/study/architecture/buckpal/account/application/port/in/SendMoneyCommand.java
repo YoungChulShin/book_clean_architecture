@@ -8,8 +8,7 @@ import study.architecture.buckpal.account.domain.Money;
 import study.architecture.buckpal.common.SelfValidating;
 
 /**
- * 입력 모델
- * 유효성 체크를 같이 한다
+ * 입력 모델 유효성 체크를 같이 한다
  */
 @Getter
 @EqualsAndHashCode(callSuper = false)

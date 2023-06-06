@@ -57,7 +57,7 @@ public class ActivityWindow {
     try {
       this.activities.add(activity);
     } catch (Exception ex) {
-      String a= ex.getMessage();
+      String a = ex.getMessage();
     }
 
   }
